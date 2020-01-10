@@ -10,28 +10,28 @@ import UIKit
 import RxSwift
 
 
-class BaseVC<ContentView: UIView, ViewModel, RouterType: Router>: UIViewController {
+public class BaseVC<ContentView: UIView, ViewModel, RouterType: Router>: UIViewController {
     
-    var router: RouterType!
-    var viewModel: ViewModel!
+    public var router: RouterType!
+    public var viewModel: ViewModel!
     
-    var contentView: ContentView {
+    public var contentView: ContentView {
         return view as! ContentView
     }
 
-    let disposeBag = DisposeBag()
+    public let disposeBag = DisposeBag()
 
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
 
         setupViews()
         bind()
     }
 
-    func setupViews() {
+    public func setupViews() {
     }
 
-    func bind() {
+    public func bind() {
     }
     
 }
