@@ -9,7 +9,7 @@
 [![Swift Version](https://img.shields.io/badge/swift-5.1-orange.svg)](https://swift.org/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
-It is a user interface framework which includes common classes, base classes, utilities, and helper classes. We use it in every our project. KafeityKit is part of [Kafeity](https://github.com/skoumalcz/kafeity/).
+It is a user interface framework which includes common classes, base classes, utilities, and helper classes. We use it in every our project. KafeityViewKit is part of [Kafeity](https://github.com/skoumalcz/kafeity/).
 
 ## Requirements
 
