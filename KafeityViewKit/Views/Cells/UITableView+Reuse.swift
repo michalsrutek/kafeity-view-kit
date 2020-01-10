@@ -18,7 +18,7 @@ public extension UITableView {
 
     func register<T: ReusableHeaderFooter>(view: T.Type) {
         let nib = UINib(nibName: view.defaultNibName, bundle: nil)
-        register(nib, forHeaderFooterViewReuseIdentifier: view.defaultReuseIdentifier)
+        register(nib, forHeaderFooterViewReuseIdentifier: view.defaultReuseId)
     }
 
     func dequeueReusableCell<T: UITableViewCell>(for indexPath: IndexPath) -> T where T: ReusableCell {
