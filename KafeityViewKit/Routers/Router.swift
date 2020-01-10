@@ -9,7 +9,7 @@
 import UIKit
 
 
-public class Router {
+open class Router {
 
     public init() {
         

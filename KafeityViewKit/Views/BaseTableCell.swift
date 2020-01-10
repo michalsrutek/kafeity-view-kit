@@ -10,16 +10,16 @@ import UIKit
 import RxSwift
 
 
-public class BaseTableCell: UITableViewCell, ReusableCell {
+open class BaseTableCell: UITableViewCell, ReusableCell {
     
     public private(set) var disposeBag = DisposeBag()
     
-    public override func awakeFromNib() {
+    open override func awakeFromNib() {
         super.awakeFromNib()
         setup()
     }
     
-    public override func prepareForReuse() {
+    open override func prepareForReuse() {
         super.prepareForReuse()
         disposeBag = DisposeBag()
     }
@@ -33,7 +33,7 @@ public class BaseTableCell: UITableViewCell, ReusableCell {
         super.init(coder: aDecoder)
     }
     
-    public func setup() {
+    open func setup() {
     }
     
 }

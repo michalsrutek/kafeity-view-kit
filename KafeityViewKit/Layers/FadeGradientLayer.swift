@@ -19,7 +19,7 @@ public enum FadeGradientType {
 }
 
 
-public class FadeGradientLayer: CAGradientLayer {
+open class FadeGradientLayer: CAGradientLayer {
     
     public init(type: FadeGradientType, startColor: UIColor = .white, endColor: UIColor = .black) {
         super.init()

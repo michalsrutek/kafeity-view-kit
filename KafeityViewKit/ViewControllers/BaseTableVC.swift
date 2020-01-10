@@ -10,32 +10,32 @@ import UIKit
 import RxSwift
 
 
-public class BaseTableVC: UITableViewController {
+open class BaseTableVC: UITableViewController {
 
     public let disposeBag = DisposeBag()
     
-    public override var preferredStatusBarStyle: UIStatusBarStyle {
+    open override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
 
-    public override func viewDidLoad() {
+    open override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
         bind()
     }
     
-    public override func viewWillAppear(_ animated: Bool) {
+    open override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         reload()
     }
 
-    public func setupViews() {
+    open func setupViews() {
     }
 
-    public func bind() {
+    open func bind() {
     }
     
-    public func reload() {
+    open func reload() {
     }
     
 }

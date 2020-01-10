@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 
 
-public class BaseView: UIView {
+open class BaseView: UIView {
     
     public let disposeBag = DisposeBag()
     
@@ -33,24 +33,24 @@ public class BaseView: UIView {
 
     }
     
-    public override func awakeFromNib() {
+    open override func awakeFromNib() {
         super.awakeFromNib()
         setup()
         bind()
     }
     
-    public func xibSetup() -> UIView {
+    open func xibSetup() -> UIView {
         let contentView = loadFromNib()
         contentView.backgroundColor = UIColor.clear
         addFullSizeConstraints(view: contentView)
         return contentView
     }
     
-    public func setup() {
+    open func setup() {
         
     }
     
-    public func bind() {
+    open func bind() {
         
     }
     

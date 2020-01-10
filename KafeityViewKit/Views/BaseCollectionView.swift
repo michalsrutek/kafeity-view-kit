@@ -10,11 +10,11 @@ import UIKit
 import RxSwift
 
 
-public class BaseCollectionCell: UICollectionViewCell, ReusableCell {
+open class BaseCollectionCell: UICollectionViewCell, ReusableCell {
     
     public private(set) var disposeBag = DisposeBag()
     
-    public override func awakeFromNib() {
+    open override func awakeFromNib() {
         super.awakeFromNib()
         setup()
     }
@@ -28,11 +28,11 @@ public class BaseCollectionCell: UICollectionViewCell, ReusableCell {
         super.init(coder: aDecoder)
     }
     
-    public override func prepareForReuse() {
+    open override func prepareForReuse() {
         super.prepareForReuse()
         disposeBag = DisposeBag()
     }
     
-    public func setup() {
+    open func setup() {
     }
 }

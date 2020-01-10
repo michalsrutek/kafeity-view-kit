@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 
 
-public class BaseNC: UINavigationController {
+open class BaseNC: UINavigationController {
 
     public let disposeBag = DisposeBag()
     

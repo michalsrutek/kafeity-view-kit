@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 
 
-public class BaseVC<ContentView: UIView, ViewModel, RouterType: Router>: UIViewController {
+open class BaseVC<ContentView: UIView, ViewModel, RouterType: Router>: UIViewController {
     
     public var router: RouterType!
     public var viewModel: ViewModel!
@@ -21,17 +21,17 @@ public class BaseVC<ContentView: UIView, ViewModel, RouterType: Router>: UIViewC
 
     public let disposeBag = DisposeBag()
 
-    public override func viewDidLoad() {
+    open override func viewDidLoad() {
         super.viewDidLoad()
 
         setupViews()
         bind()
     }
 
-    public func setupViews() {
+    open func setupViews() {
     }
 
-    public func bind() {
+    open func bind() {
     }
     
 }
