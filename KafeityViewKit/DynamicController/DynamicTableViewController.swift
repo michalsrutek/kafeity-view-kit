@@ -10,9 +10,9 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class DynamicTableViewController: UITableViewController {
+open class DynamicTableViewController: UITableViewController {
     
-    var defaultCellHeight: CGFloat {
+    open var defaultCellHeight: CGFloat {
         set {
             dynamicLogic.defaultCellHeight = newValue
         }
@@ -21,7 +21,7 @@ class DynamicTableViewController: UITableViewController {
         }
     }
     
-    var defaultSectionHeight: CGFloat {
+    open var defaultSectionHeight: CGFloat {
         set {
             dynamicLogic.defaultSectionHeight = newValue
         }
@@ -30,15 +30,15 @@ class DynamicTableViewController: UITableViewController {
         }
     }
     
-    var sections: BehaviorRelay<[Section<CellData>]> {
+    open var sections: BehaviorRelay<[Section<CellData>]> {
         return dynamicLogic.sections
     }
     
-    let disposeBag = DisposeBag()
+    public let disposeBag = DisposeBag()
     
     private var dynamicLogic = DynamicTableViewLogic()
     
-    override func viewDidLoad() {
+    open override func viewDidLoad() {
         super.viewDidLoad()
         
         if let dynamicTableView = tableView as? DynamicTableView {
@@ -59,73 +59,73 @@ class DynamicTableViewController: UITableViewController {
     
     // MARK: - Logic
     
-    func setupViews() {
+    open func setupViews() {
         
     }
     
-    func bind() {
+    open func bind() {
         
     }
     
-    func registerNibs() {
+    open func registerNibs() {
         
     }
     
-    func reloadData() {
+    open func reloadData() {
         tableView.reloadData()
     }
     
-    func setupData() -> [Section<CellData>] {
+    open func setupData() -> [Section<CellData>] {
         return []
     }
 
     // MARK: - Table view
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    open override func numberOfSections(in tableView: UITableView) -> Int {open
         return dynamicLogic.numberOfSections(in: tableView)
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    open override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dynamicLogic.tableView(tableView, numberOfRowsInSection: section)
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    open override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return dynamicLogic.tableView(tableView, cellForRowAt: indexPath)
     }
     
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    open override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return dynamicLogic.tableView(tableView, titleForHeaderInSection: section)
     }
     
-    override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+    open override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
         return dynamicLogic.tableView(tableView, titleForFooterInSection: section)
     }
     
-    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    open override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         return dynamicLogic.tableView(tableView, viewForHeaderInSection: section)
     }
     
-    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    open override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return dynamicLogic.tableView(tableView, heightForHeaderInSection: section)
     }
     
-    override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+    open override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         return dynamicLogic.tableView(tableView, viewForFooterInSection: section)
     }
     
-    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+    open override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return dynamicLogic.tableView(tableView, heightForFooterInSection: section)
     }
     
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    open override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return dynamicLogic.tableView(tableView, heightForRowAt: indexPath)
     }
     
-    override func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
+    open override func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
         return dynamicLogic.tableView(tableView, shouldHighlightRowAt: indexPath)
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    open override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         dynamicLogic.tableView(tableView, didSelectRowAt: indexPath)
     }
 

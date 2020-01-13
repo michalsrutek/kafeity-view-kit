@@ -11,9 +11,9 @@ import RxSwift
 import RxCocoa
 
 
-public class DynamicTableView: UITableView, UITableViewDataSource, UITableViewDelegate {
+open class DynamicTableView: UITableView, UITableViewDataSource, UITableViewDelegate {
     
-    public var defaultCellHeight: CGFloat {
+    open var defaultCellHeight: CGFloat {
         set {
             dynamicLogic.defaultCellHeight = newValue
         }
@@ -22,7 +22,7 @@ public class DynamicTableView: UITableView, UITableViewDataSource, UITableViewDe
         }
     }
     
-    public var defaultSectionHeight: CGFloat {
+    open var defaultSectionHeight: CGFloat {
         set {
             dynamicLogic.defaultSectionHeight = newValue
         }
@@ -31,7 +31,7 @@ public class DynamicTableView: UITableView, UITableViewDataSource, UITableViewDe
         }
     }
     
-    public var registerNibsHandler: (() -> Void)? {
+    open var registerNibsHandler: (() -> Void)? {
         set {
             dynamicLogic.registerNibsHandler = newValue
         }
@@ -40,7 +40,7 @@ public class DynamicTableView: UITableView, UITableViewDataSource, UITableViewDe
         }
     }
     
-    public var reloadDataHandler: (() -> Void)? {
+    open var reloadDataHandler: (() -> Void)? {
         set {
             dynamicLogic.reloadDataHandler = newValue
         }
@@ -49,7 +49,7 @@ public class DynamicTableView: UITableView, UITableViewDataSource, UITableViewDe
         }
     }
     
-    public var controller: UIViewController? {
+    open var controller: UIViewController? {
         set {
             dynamicLogic.controller = newValue
         }
@@ -58,13 +58,13 @@ public class DynamicTableView: UITableView, UITableViewDataSource, UITableViewDe
         }
     }
     
-    public var sections: BehaviorRelay<[Section<CellData>]> {
+    open var sections: BehaviorRelay<[Section<CellData>]> {
         return dynamicLogic.sections
     }
     
     public let disposeBag = DisposeBag()
     
-    public override var tableHeaderView: UIView? {
+    open override var tableHeaderView: UIView? {
         get {
             return super.tableHeaderView
         }
@@ -90,12 +90,12 @@ public class DynamicTableView: UITableView, UITableViewDataSource, UITableViewDe
         configuration()
     }
     
-    public override func awakeFromNib() {
+    open override func awakeFromNib() {
         super.awakeFromNib()
         configuration()
     }
     
-    public override func didMoveToSuperview() {
+    open override func didMoveToSuperview() {
         super.didMoveToSuperview()
         //let sections = setupData()
         //Observable.just(sections).bind(to: self.sections).dispose()
@@ -115,73 +115,73 @@ public class DynamicTableView: UITableView, UITableViewDataSource, UITableViewDe
     
     // MARK: - Logic
     
-    public func setup() {
+    open func setup() {
         
     }
     
-    public func registerNibs() {
+    open func registerNibs() {
         
     }
     
-    public func bind() {
+    open func bind() {
         
     }
     
-    public override func reloadData() {
+    open override func reloadData() {
         super.reloadData()
     }
     
-    public func setupData() -> [Section<CellData>] {
+    open func setupData() -> [Section<CellData>] {
         return []
     }
     
     // MARK: - Table view
     
-    public func numberOfSections(in tableView: UITableView) -> Int {
+    open func numberOfSections(in tableView: UITableView) -> Int {
         return dynamicLogic.numberOfSections(in: tableView)
     }
     
-    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    open func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dynamicLogic.tableView(tableView, numberOfRowsInSection: section)
     }
     
-    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    open func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return dynamicLogic.tableView(tableView, cellForRowAt: indexPath)
     }
     
-    public func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    open func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return dynamicLogic.tableView(tableView, titleForHeaderInSection: section)
     }
     
-    public func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+    open func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
         return dynamicLogic.tableView(tableView, titleForFooterInSection: section)
     }
     
-    public func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    open func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         return dynamicLogic.tableView(tableView, viewForHeaderInSection: section)
     }
     
-    public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    open func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return dynamicLogic.tableView(tableView, heightForHeaderInSection: section)
     }
     
-    public func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+    open func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         return dynamicLogic.tableView(tableView, viewForFooterInSection: section)
     }
     
-    public func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+    open func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return dynamicLogic.tableView(tableView, heightForFooterInSection: section)
     }
     
-    public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    open func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return dynamicLogic.tableView(tableView, heightForRowAt: indexPath)
     }
     
-    public func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
+    open func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
         return dynamicLogic.tableView(tableView, shouldHighlightRowAt: indexPath)
     }
     
-    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    open func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         dynamicLogic.tableView(tableView, didSelectRowAt: indexPath)
     }
 
