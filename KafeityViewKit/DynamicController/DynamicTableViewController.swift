@@ -81,7 +81,7 @@ open class DynamicTableViewController: UITableViewController {
 
     // MARK: - Table view
 
-    open override func numberOfSections(in tableView: UITableView) -> Int {open
+    open override func numberOfSections(in tableView: UITableView) -> Int {
         return dynamicLogic.numberOfSections(in: tableView)
     }
     
