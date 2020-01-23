@@ -15,7 +15,7 @@ open class BaseView: UIView {
     public let disposeBag = DisposeBag()
     
     deinit {
-        debugPrint("DEINIT \(String(_cocoaString: self))")
+        debugPrint("DEINIT \(String(describing: self))")
     }
     
     public convenience init() {
