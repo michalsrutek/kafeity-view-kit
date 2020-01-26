@@ -9,7 +9,7 @@
 import UIKit
 
 
-public protocol ReusableHeaderFooter {
+public protocol ReusableHeaderFooter: class {
 
     static var defaultReuseId: String { get }
     static var defaultNibName: String { get }

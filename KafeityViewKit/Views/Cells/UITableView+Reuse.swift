@@ -12,12 +12,14 @@ import UIKit
 public extension UITableView {
 
     func register<T: ReusableCell>(cell: T.Type) {
-        let nib = UINib(nibName: cell.defaultNibName, bundle: nil)
+        let bundle = Bundle(for: T.self)
+        let nib = UINib(nibName: cell.defaultNibName, bundle: bundle)
         register(nib, forCellReuseIdentifier: cell.defaultReuseId)
     }
 
     func register<T: ReusableHeaderFooter>(view: T.Type) {
-        let nib = UINib(nibName: view.defaultNibName, bundle: nil)
+        let bundle = Bundle(for: T.self)
+        let nib = UINib(nibName: view.defaultNibName, bundle: bundle)
         register(nib, forHeaderFooterViewReuseIdentifier: view.defaultReuseId)
     }
 

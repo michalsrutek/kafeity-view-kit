@@ -9,7 +9,7 @@
 import UIKit
 
 
-public protocol ReusableCell {
+public protocol ReusableCell: class {
 
     static var defaultReuseId: String { get }
     static var defaultNibName: String { get }
