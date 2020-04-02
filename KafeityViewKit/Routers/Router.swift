@@ -38,7 +38,7 @@ open class Router {
     public func showError(_ vc: UIViewController, errorMessage: String) {
         let title = "Oops"
         let alert = UIAlertController(title: title, message: errorMessage, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         vc.present(alert, animated: true, completion:  nil)
     }
     

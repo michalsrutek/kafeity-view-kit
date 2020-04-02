@@ -25,10 +25,6 @@ public class KeyboardManager {
         addObservers()
     }
     
-    deinit {
-        NotificationCenter.default.removeObserver(self)
-    }
-    
     public func animate(view: UIView) {
         let duration = userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double ?? 0.3
         let curve = UIView.KeyframeAnimationOptions(rawValue: userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as? UInt ?? 0)

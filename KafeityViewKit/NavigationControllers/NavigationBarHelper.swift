@@ -13,7 +13,7 @@ public enum NavigationBarHelper {
     
     public static func solid(_ viewController: UIViewController, color: UIColor, titleColor: UIColor? = nil, tintColor: UIColor? = nil, largeTitles: Bool = true) {
         
-        let titleAttributes = titleColor == nil ? [:] : [NSAttributedString.Key.foregroundColor : titleColor!] as [NSAttributedString.Key : Any]
+        let titleAttributes: [NSAttributedString.Key: Any] = titleColor == nil ? [:] : [.foregroundColor: titleColor!]
         let navigationBar = viewController.navigationController?.navigationBar
         
         if #available(iOS 13.0, *) {
