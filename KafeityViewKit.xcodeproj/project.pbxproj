@@ -32,7 +32,6 @@
 		18C0F95B23C74CCD0046108B /* FWVoidOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C0F94F23C74CCD0046108B /* FWVoidOut.swift */; };
 		18C0F95C23C74CCD0046108B /* FWFourOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C0F95023C74CCD0046108B /* FWFourOut.swift */; };
 		18C0F95E23C74CCD0046108B /* FWTwoOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C0F95223C74CCD0046108B /* FWTwoOut.swift */; };
-		18C0F96123C750A60046108B /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C0F95F23C750A60046108B /* UIView+Constraints.swift */; };
 		18C0F96223C750A60046108B /* NSAttributedString+Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C0F96023C750A60046108B /* NSAttributedString+Init.swift */; };
 		18C0F96423C7510F0046108B /* KeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C0F96323C7510F0046108B /* KeyboardManager.swift */; };
 		18C0F96723C751970046108B /* NavigationBarHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C0F96623C751970046108B /* NavigationBarHelper.swift */; };
@@ -47,6 +46,7 @@
 		18C0F98223C754A30046108B /* BaseCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C0F97F23C754A30046108B /* BaseCollectionView.swift */; };
 		18C0F98323C754A30046108B /* BaseTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C0F98023C754A30046108B /* BaseTableCell.swift */; };
 		18C0F98423C754A30046108B /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C0F98123C754A30046108B /* BaseView.swift */; };
+		FF906043243661480035A1AB /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF906042243661480035A1AB /* UIView+Constraints.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,7 +88,6 @@
 		18C0F94F23C74CCD0046108B /* FWVoidOut.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FWVoidOut.swift; sourceTree = "<group>"; };
 		18C0F95023C74CCD0046108B /* FWFourOut.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FWFourOut.swift; sourceTree = "<group>"; };
 		18C0F95223C74CCD0046108B /* FWTwoOut.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FWTwoOut.swift; sourceTree = "<group>"; };
-		18C0F95F23C750A60046108B /* UIView+Constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Constraints.swift"; path = "../Extensions/UIView+Constraints.swift"; sourceTree = "<group>"; };
 		18C0F96023C750A60046108B /* NSAttributedString+Init.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Init.swift"; sourceTree = "<group>"; };
 		18C0F96323C7510F0046108B /* KeyboardManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardManager.swift; sourceTree = "<group>"; };
 		18C0F96623C751970046108B /* NavigationBarHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBarHelper.swift; sourceTree = "<group>"; };
@@ -103,6 +102,7 @@
 		18C0F97F23C754A30046108B /* BaseCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCollectionView.swift; sourceTree = "<group>"; };
 		18C0F98023C754A30046108B /* BaseTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableCell.swift; sourceTree = "<group>"; };
 		18C0F98123C754A30046108B /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		FF906042243661480035A1AB /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,7 +157,7 @@
 				18C0F92823C73E100046108B /* ViewControllers */,
 				18C0F96823C752170046108B /* Layers */,
 				18C0F92923C73E1B0046108B /* Views */,
-				18C0F92B23C73E4B0046108B /* Autolayout */,
+				FF9060402436612B0035A1AB /* Autolayout */,
 				18C0F92C23C73F120046108B /* Extensions */,
 				18C0F92723C73E090046108B /* Utilities */,
 				18C0F93423C747550046108B /* DynamicController */,
@@ -225,14 +225,6 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		18C0F92B23C73E4B0046108B /* Autolayout */ = {
-			isa = PBXGroup;
-			children = (
-				18C0F95F23C750A60046108B /* UIView+Constraints.swift */,
-			);
-			path = Autolayout;
-			sourceTree = "<group>";
-		};
 		18C0F92C23C73F120046108B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -295,6 +287,14 @@
 				18C0F96923C7522F0046108B /* FadeGradientLayer.swift */,
 			);
 			path = Layers;
+			sourceTree = "<group>";
+		};
+		FF9060402436612B0035A1AB /* Autolayout */ = {
+			isa = PBXGroup;
+			children = (
+				FF906042243661480035A1AB /* UIView+Constraints.swift */,
+			);
+			path = Autolayout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -436,7 +436,7 @@
 				18C0F95523C74CCD0046108B /* FWVoid.swift in Sources */,
 				18C0F95823C74CCD0046108B /* FWBase.swift in Sources */,
 				18C0F97D23C754920046108B /* BaseVC.swift in Sources */,
-				18C0F96123C750A60046108B /* UIView+Constraints.swift in Sources */,
+				FF906043243661480035A1AB /* UIView+Constraints.swift in Sources */,
 				18C0F95623C74CCD0046108B /* FWOne.swift in Sources */,
 				18C0F97E23C754920046108B /* BaseNC.swift in Sources */,
 				18C0F93023C743760046108B /* Router.swift in Sources */,
