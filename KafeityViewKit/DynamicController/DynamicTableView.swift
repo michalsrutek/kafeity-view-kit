@@ -76,7 +76,7 @@ open class DynamicTableView: UITableView, UITableViewDataSource, UITableViewDele
     public let dynamicLogic = DynamicTableViewLogic()
     
     public init(style: UITableView.Style) {
-        super.init(frame: CGRect.zero, style: style)
+        super.init(frame: .zero, style: style)
         configuration()
     }
     

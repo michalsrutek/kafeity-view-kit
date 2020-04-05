@@ -22,7 +22,7 @@ public extension NSAttributedString {
     }
     
     convenience init?(htmlText: String) {
-        guard let htmlStringData = htmlText.data(using: String.Encoding.utf8) else {
+        guard let htmlStringData = htmlText.data(using: .utf8) else {
             return nil
         }
         

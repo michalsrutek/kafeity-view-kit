@@ -89,10 +89,10 @@ public class DynamicTableViewLogic: NSObject, UITableViewDataSource, UITableView
         let cell = cellData.cell.perform(tableView, indexPath)
         
         if (cellData.segue != nil || cellData.select != nil) && cellData.showAccessoryIndicator {
-            cell.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
+            cell.accessoryType = .disclosureIndicator
         }
         else {
-            cell.accessoryType = UITableViewCell.AccessoryType.none
+            cell.accessoryType = .none
         }
         
         return cell

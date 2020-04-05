@@ -41,7 +41,7 @@ open class BaseView: UIView {
     
     open func xibSetup() -> UIView {
         let contentView = loadFromNib()
-        contentView.backgroundColor = UIColor.clear
+        contentView.backgroundColor = .clear
         addFullSizeConstraints(view: contentView)
         return contentView
     }
