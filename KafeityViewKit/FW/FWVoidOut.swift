@@ -8,25 +8,21 @@
 
 import Foundation
 
-
 public class FWVoidOut<Output: Any>: FWBase {
-    
     private let function: () -> Output
-    
+
     public init<Owner: AnyObject>(_ owner: Owner, _ closure: @escaping (Owner) -> (() -> Output), defaultValue: Output? = nil) {
         function = { [weak owner] in
             if let owner = owner {
-               return closure(owner)()
-            }
-            else if let defaultValue = defaultValue {
+                return closure(owner)()
+            } else if let defaultValue = defaultValue {
                 return defaultValue
             }
             return closure(owner!)()
         }
     }
-    
+
     public func perform() -> Output {
-        return function()
+        function()
     }
-    
 }

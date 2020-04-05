@@ -8,11 +8,9 @@
 
 import Foundation
 
-
 public class FWTwo<FirstInput: Any, SecondInput: Any>: FWBase {
-    
     private var function: (FirstInput, SecondInput) -> Void
-    
+
     public init<Owner: AnyObject>(_ owner: Owner, _ closure: @escaping (Owner) -> ((FirstInput, SecondInput) -> Void)) {
         function = { [weak owner] firstInput, secondInput in
             if let owner = owner {
@@ -20,9 +18,8 @@ public class FWTwo<FirstInput: Any, SecondInput: Any>: FWBase {
             }
         }
     }
-    
+
     public func perform(_ firstInput: FirstInput, _ secondInput: SecondInput) {
         function(firstInput, secondInput)
     }
-    
 }

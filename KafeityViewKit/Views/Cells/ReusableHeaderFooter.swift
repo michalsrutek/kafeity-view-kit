@@ -8,21 +8,17 @@
 
 import UIKit
 
-
-public protocol ReusableHeaderFooter: class {
-
+public protocol ReusableHeaderFooter: AnyObject {
     static var defaultReuseId: String { get }
     static var defaultNibName: String { get }
-    
 }
 
 public extension ReusableHeaderFooter where Self: UIView {
-
     static var defaultReuseId: String {
-        return String(describing: self)
+        String(describing: self)
     }
 
     static var defaultNibName: String {
-        return defaultReuseId
+        defaultReuseId
     }
 }

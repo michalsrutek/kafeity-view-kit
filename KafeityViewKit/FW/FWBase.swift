@@ -8,11 +8,6 @@
 
 import Foundation
 
-
 public class FWBase {
-    
-    public init() {
-        
-    }
-    
+    public init() {}
 }

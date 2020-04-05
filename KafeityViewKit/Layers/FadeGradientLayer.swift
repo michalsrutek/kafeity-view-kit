@@ -8,22 +8,17 @@
 
 import UIKit
 
-
 public enum FadeGradientType {
-    
     case leftToRight
     case bottomToTop
     case rightToLeft
     case topToBottom
-    
 }
 
-
 open class FadeGradientLayer: CAGradientLayer {
-    
     public init(type: FadeGradientType, startColor: UIColor = .white, endColor: UIColor = .black) {
         super.init()
-        
+
         switch type {
         case .leftToRight:
             colors = [startColor.cgColor, endColor.withAlphaComponent(0.0).cgColor]
@@ -39,13 +34,12 @@ open class FadeGradientLayer: CAGradientLayer {
             colors = [startColor.cgColor, endColor.withAlphaComponent(0.0).cgColor]
         }
     }
-    
+
     public override init(layer: Any) {
         super.init(layer: layer)
     }
-    
+
     public required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
 }

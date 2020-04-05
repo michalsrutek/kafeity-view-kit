@@ -8,25 +8,21 @@
 
 import Foundation
 
-
 public class FWTwoOut<FirstInput: Any, SecondInput: Any, Output: Any>: FWBase {
-    
     private var function: (FirstInput, SecondInput) -> Output
-    
+
     public init<Owner: AnyObject>(_ owner: Owner, _ closure: @escaping (Owner) -> ((FirstInput, SecondInput) -> Output), defaultValue: Output? = nil) {
         function = { [weak owner] firstInput, secondInput in
             if let owner = owner {
                 return closure(owner)(firstInput, secondInput)
-            }
-            else if let defaultValue = defaultValue {
+            } else if let defaultValue = defaultValue {
                 return defaultValue
             }
             return closure(owner!)(firstInput, secondInput)
         }
     }
-    
+
     public func perform(_ firstInput: FirstInput, _ secondInput: SecondInput) -> Output {
-        return function(firstInput, secondInput)
+        function(firstInput, secondInput)
     }
-    
 }

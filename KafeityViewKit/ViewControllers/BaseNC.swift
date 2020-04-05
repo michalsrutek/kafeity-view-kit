@@ -6,13 +6,9 @@
 //  Copyright © 2020 SKOUMAL, s.r.o. All rights reserved.
 //
 
-import UIKit
 import RxSwift
-
+import UIKit
 
 open class BaseNC: UINavigationController {
-
     public let disposeBag = DisposeBag()
-    
 }
-

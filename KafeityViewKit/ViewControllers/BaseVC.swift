@@ -6,17 +6,15 @@
 //  Copyright © 2020 SKOUMAL, s.r.o. All rights reserved.
 //
 
-import UIKit
 import RxSwift
-
+import UIKit
 
 open class BaseVC<ContentView: UIView, ViewModel, RouterType: Router>: UIViewController {
-    
     public var router: RouterType!
     public var viewModel: ViewModel!
-    
+
     public var contentView: ContentView {
-        return view as! ContentView
+        view as! ContentView
     }
 
     public let disposeBag = DisposeBag()
@@ -28,10 +26,7 @@ open class BaseVC<ContentView: UIView, ViewModel, RouterType: Router>: UIViewCon
         bind()
     }
 
-    open func setupViews() {
-    }
+    open func setupViews() {}
 
-    open func bind() {
-    }
-    
+    open func bind() {}
 }

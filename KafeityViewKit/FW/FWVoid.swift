@@ -8,11 +8,9 @@
 
 import Foundation
 
-
 public class FWVoid: FWBase {
-    
     private let function: () -> Void
-    
+
     public init<Owner: AnyObject>(_ owner: Owner, _ closure: @escaping (Owner) -> (() -> Void)) {
         function = { [weak owner] in
             if let owner = owner {
@@ -20,9 +18,8 @@ public class FWVoid: FWBase {
             }
         }
     }
-    
+
     public func perform() {
         function()
     }
-    
 }

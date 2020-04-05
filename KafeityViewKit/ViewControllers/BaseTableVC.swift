@@ -6,16 +6,14 @@
 //  Copyright © 2020 SKOUMAL, s.r.o. All rights reserved.
 //
 
-import UIKit
 import RxSwift
-
+import UIKit
 
 open class BaseTableVC: UITableViewController {
-
     public let disposeBag = DisposeBag()
-    
+
     open override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
+        .lightContent
     }
 
     open override func viewDidLoad() {
@@ -23,19 +21,15 @@ open class BaseTableVC: UITableViewController {
         setupViews()
         bind()
     }
-    
+
     open override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         reload()
     }
 
-    open func setupViews() {
-    }
+    open func setupViews() {}
 
-    open func bind() {
-    }
-    
-    open func reload() {
-    }
-    
+    open func bind() {}
+
+    open func reload() {}
 }

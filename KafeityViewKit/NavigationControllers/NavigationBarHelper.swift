@@ -8,23 +8,20 @@
 
 import UIKit
 
-
 public enum NavigationBarHelper {
-    
     public static func solid(_ viewController: UIViewController, color: UIColor, titleColor: UIColor? = nil, tintColor: UIColor? = nil, largeTitles: Bool = true) {
-        
-        let titleAttributes = titleColor == nil ? [:] : [NSAttributedString.Key.foregroundColor : titleColor!] as [NSAttributedString.Key : Any]
+        let titleAttributes = titleColor == nil ? [:] : [NSAttributedString.Key.foregroundColor: titleColor!] as [NSAttributedString.Key: Any]
         let navigationBar = viewController.navigationController?.navigationBar
-        
+
         if #available(iOS 13.0, *) {
             let navigationBarAppearance = UINavigationBarAppearance()
             navigationBarAppearance.backgroundColor = color
-            
+
             if titleColor != nil {
                 navigationBarAppearance.titleTextAttributes = titleAttributes
                 navigationBarAppearance.largeTitleTextAttributes = titleAttributes
             }
-            
+
             navigationBar?.standardAppearance = navigationBarAppearance
             navigationBar?.compactAppearance = navigationBarAppearance
             navigationBar?.scrollEdgeAppearance = navigationBarAppearance
@@ -39,15 +36,14 @@ public enum NavigationBarHelper {
             navigationBar?.backgroundColor = color
             navigationBar?.isTranslucent = true
         }
-        
+
         if #available(iOS 11.0, *) {
             navigationBar?.prefersLargeTitles = true
             viewController.navigationItem.largeTitleDisplayMode = largeTitles ? .always : .never
         }
-        
+
         if let tintColor = tintColor {
             navigationBar?.tintColor = tintColor
         }
     }
-    
 }

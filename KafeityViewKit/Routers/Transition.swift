@@ -8,20 +8,18 @@
 
 import UIKit
 
-
 public enum Transition {
-    
     case push
     case modal(animated: Bool)
     case replace(animated: Bool)
-    
+
     public func perform(from: UIViewController, to: UIViewController) {
         switch self {
         case .push:
             from.show(to, sender: nil)
-        case .modal(let animated):
+        case let .modal(animated):
             from.present(to, animated: animated, completion: nil)
-        case .replace(let animated):
+        case let .replace(animated):
             from.navigationController?.setViewControllers([to], animated: animated)
         }
     }
